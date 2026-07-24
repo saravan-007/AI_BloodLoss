@@ -126,9 +126,9 @@ class _DoctorDashboardScreenState extends State<DoctorDashboardScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(title, style: TextStyle(color: Colors.slate[400], fontSize: 11, fontWeight: FontWeight.bold)),
+                  Text(title, style: TextStyle(color: Colors.grey[400], fontSize: 11, fontWeight: FontWeight.bold)),
                   const SizedBox(height: 4),
-                  Text(value, style: const TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.black)),
+                  Text(value, style: const TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w900)),
                 ],
               ),
             ),
@@ -147,7 +147,7 @@ class _DoctorDashboardScreenState extends State<DoctorDashboardScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('AI BloodLoss Monitor', style: TextStyle(fontWeight: FontWeight.black)),
+        title: const Text('AI BloodLoss Monitor', style: TextStyle(fontWeight: FontWeight.w900)),
         centerTitle: false,
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -173,7 +173,7 @@ class _DoctorDashboardScreenState extends State<DoctorDashboardScreen> {
                 backgroundColor: Colors.blue,
                 child: Text(
                   user?['fullName']?.substring(0, 1)?.toUpperCase() ?? 'U',
-                  style: const TextStyle(fontSize: 24, fontWeight: FontWeight.black, color: Colors.white),
+                  style: const TextStyle(fontSize: 24, fontWeight: FontWeight.w900, color: Colors.white),
                 ),
               ),
               accountName: Text(user?['fullName'] ?? 'Active User', style: const TextStyle(fontWeight: FontWeight.bold)),
@@ -213,11 +213,11 @@ class _DoctorDashboardScreenState extends State<DoctorDashboardScreen> {
             // Welcome Header
             Text(
               'Welcome, ${user?['fullName'] ?? 'Doctor'}',
-              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.black),
+              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w900),
             ),
             Text(
               'Here is the surgical department summary for today.',
-              style: TextStyle(color: Colors.slate[400], fontSize: 13),
+              style: TextStyle(color: Colors.grey[400], fontSize: 13),
             ),
             const SizedBox(height: 20),
 
@@ -228,7 +228,7 @@ class _DoctorDashboardScreenState extends State<DoctorDashboardScreen> {
                     children: [
                       _buildStatCard('TOTAL PATIENTS', '$_totalPatients', Icons.people_outline, Colors.blue),
                       const SizedBox(height: 8),
-                      _buildStatCard('SURGERIES TODAY', '$_totalSurgeriesToday', Icons.medical_services_outlined, Colors.emerald),
+                      _buildStatCard('SURGERIES TODAY', '$_totalSurgeriesToday', Icons.medical_services_outlined, const Color(0xFF10B981)),
                       const SizedBox(height: 8),
                       _buildStatCard('AGGREGATE BLOOD LOSS', '${_totalBloodLossToday.toInt()} ml', Icons.bloodtype_outlined, Colors.rose),
                     ],
@@ -297,17 +297,17 @@ class _DoctorDashboardScreenState extends State<DoctorDashboardScreen> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          const Text('ONGOING SURGERY SESSION', style: TextStyle(fontWeight: FontWeight.black, fontSize: 11, color: Colors.blue, letterSpacing: 1)),
+                          const Text('ONGOING SURGERY SESSION', style: TextStyle(fontWeight: FontWeight.w900, fontSize: 11, color: Colors.blue, letterSpacing: 1)),
                           Container(
-                            padding: const EdgeInsets.symmetric(horizontal: 8, py: 4),
+                            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                             decoration: BoxDecoration(color: Colors.red, borderRadius: BorderRadius.circular(6)),
                             child: const Text('LIVE', style: TextStyle(fontSize: 9, fontWeight: FontWeight.bold)),
                           ),
                         ],
                       ),
                       const SizedBox(height: 12),
-                      Text(activeWf.patientName ?? 'Patient', style: const TextStyle(fontSize: 18, fontWeight: FontWeight.black)),
-                      Text(activeWf.surgeryType ?? 'Procedure', style: TextStyle(color: Colors.slate[400], fontSize: 13)),
+                      Text(activeWf.patientName ?? 'Patient', style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w900)),
+                      Text(activeWf.surgeryType ?? 'Procedure', style: TextStyle(color: Colors.grey[400], fontSize: 13)),
                       const SizedBox(height: 16),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -315,15 +315,15 @@ class _DoctorDashboardScreenState extends State<DoctorDashboardScreen> {
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text('BLOOD LOSS', style: TextStyle(color: Colors.slate[500], fontSize: 9, fontWeight: FontWeight.bold)),
-                              Text('${activeWf.totalBloodLoss.toInt()} ml', style: const TextStyle(fontSize: 16, fontWeight: FontWeight.black, color: Colors.redAccent)),
+                              Text('BLOOD LOSS', style: TextStyle(color: Colors.grey[500], fontSize: 9, fontWeight: FontWeight.bold)),
+                              Text('${activeWf.totalBloodLoss.toInt()} ml', style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w900, color: Colors.redAccent)),
                             ],
                           ),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text('FLUID LOSS', style: TextStyle(color: Colors.slate[500], fontSize: 9, fontWeight: FontWeight.bold)),
-                              Text('${activeWf.totalFluidLoss.toInt()} ml', style: const TextStyle(fontSize: 16, fontWeight: FontWeight.black, color: Colors.amber)),
+                              Text('FLUID LOSS', style: TextStyle(color: Colors.grey[500], fontSize: 9, fontWeight: FontWeight.bold)),
+                              Text('${activeWf.totalFluidLoss.toInt()} ml', style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w900, color: Colors.amber)),
                             ],
                           ),
                           ElevatedButton(
@@ -369,28 +369,28 @@ class _DoctorDashboardScreenState extends State<DoctorDashboardScreen> {
                             children: [
                               const Text('HR (bpm)', style: TextStyle(fontSize: 10, color: Colors.grey)),
                               const SizedBox(height: 4),
-                              Text('$_simHr', style: const TextStyle(fontSize: 18, fontWeight: FontWeight.black, color: Colors.redAccent)),
+                              Text('$_simHr', style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w900, color: Colors.redAccent)),
                             ],
                           ),
                           Column(
                             children: [
                               const Text('BP', style: TextStyle(fontSize: 10, color: Colors.grey)),
                               const SizedBox(height: 4),
-                              Text(_simBp, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.black, color: Colors.blueAccent)),
+                              Text(_simBp, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w900, color: Colors.blueAccent)),
                             ],
                           ),
                           Column(
                             children: [
                               const Text('SpO2 (%)', style: TextStyle(fontSize: 10, color: Colors.grey)),
                               const SizedBox(height: 4),
-                              Text('$_simSpo2%', style: const TextStyle(fontSize: 18, fontWeight: FontWeight.black, color: Colors.emerald)),
+                              Text('$_simSpo2%', style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w900, color: const Color(0xFF10B981))),
                             ],
                           ),
                         ],
                       ),
                       const SizedBox(height: 16),
                       Text('Simulated Blood Loss: ${(_simGauzeLoss + _simSuctionLoss).toInt()} ml', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
-                      Text('Simulated Fluid Loss: ${(_simGauzeLoss + _simSuctionLoss + _simUrine + _simInsensible).toInt()} ml', style: TextStyle(color: Colors.slate[400], fontSize: 12)),
+                      Text('Simulated Fluid Loss: ${(_simGauzeLoss + _simSuctionLoss + _simUrine + _simInsensible).toInt()} ml', style: TextStyle(color: Colors.grey[400], fontSize: 12)),
                     ],
                   ],
                 ),

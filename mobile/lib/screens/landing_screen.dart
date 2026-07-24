@@ -52,7 +52,7 @@ class LandingScreen extends StatelessWidget {
                     'AI Blood Loss Estimator\n& Fluid Monitor',
                     textAlign: TextAlign.center,
                     style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                      fontWeight: FontWeight.black,
+                      fontWeight: FontWeight.w900,
                       height: 1.2,
                       color: Colors.white,
                     ),
@@ -62,7 +62,7 @@ class LandingScreen extends StatelessWidget {
                     'Intelligent intraoperative medical monitoring and analytics assistant for surgical departments.',
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      color: Colors.slate[400],
+                      color: Colors.grey[400],
                       fontSize: 14,
                       height: 1.5,
                     ),
@@ -73,9 +73,9 @@ class LandingScreen extends StatelessWidget {
                     'SELECT YOUR ROLE TO ENTER',
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      color: Colors.slate[500],
+                      color: Colors.grey[500],
                       fontSize: 11,
-                      fontWeight: FontWeight.black,
+                      fontWeight: FontWeight.w900,
                       letterSpacing: 1.5,
                     ),
                   ).animate().fadeIn(delay: 700.ms),

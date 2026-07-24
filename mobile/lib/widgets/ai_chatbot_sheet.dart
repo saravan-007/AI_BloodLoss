@@ -137,7 +137,7 @@ class _AiChatbotSheetState extends State<AiChatbotSheet> {
                   width: 40,
                   height: 4,
                   margin: const EdgeInsets.only(bottom: 12),
-                  decoration: BoxDecoration(color: Colors.slate[700], borderRadius: BorderRadius.circular(2)),
+                  decoration: BoxDecoration(color: Colors.grey[700], borderRadius: BorderRadius.circular(2)),
                 ),
               ),
               Row(
@@ -145,7 +145,7 @@ class _AiChatbotSheetState extends State<AiChatbotSheet> {
                 children: [
                   Text(
                     'AI Clinical Assistant',
-                    style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.black, fontSize: 18),
+                    style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w900, fontSize: 18),
                   ),
                   IconButton(
                     icon: const Icon(Icons.close_rounded),
@@ -173,7 +173,7 @@ class _AiChatbotSheetState extends State<AiChatbotSheet> {
                         decoration: BoxDecoration(
                           color: isUser
                               ? const Color(0xFF3B82F6).withOpacity(0.15)
-                              : (isSystem ? Colors.slate[800]?.withOpacity(0.5) : const Color(0xFF1E293B)),
+                              : (isSystem ? Colors.grey[800]?.withOpacity(0.5) : const Color(0xFF1E293B)),
                           borderRadius: BorderRadius.circular(16),
                         ),
                         constraints: BoxConstraints(maxWidth: MediaQuery.of(context).size.width * 0.8),

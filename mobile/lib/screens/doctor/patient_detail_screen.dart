@@ -149,7 +149,7 @@ class _PatientDetailScreenState extends State<PatientDetailScreen> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('PATIENT DOSSIER', style: TextStyle(color: Colors.slate[500], fontSize: 10, fontWeight: FontWeight.bold, letterSpacing: 1.2)),
+                          Text('PATIENT DOSSIER', style: TextStyle(color: Colors.grey[500], fontSize: 10, fontWeight: FontWeight.bold, letterSpacing: 1.2)),
                           const SizedBox(height: 8),
                           Text('Age/Gender: ${_patient['age']} y/o • ${_patient['gender']}', style: const TextStyle(fontWeight: FontWeight.bold)),
                           Text('Weight: ${_patient['weight']} kg | Blood Group: ${_patient['bloodGroup']}', style: const TextStyle(fontWeight: FontWeight.bold)),

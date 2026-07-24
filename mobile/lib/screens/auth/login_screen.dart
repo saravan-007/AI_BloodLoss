@@ -116,7 +116,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   style: TextStyle(
                     color: primaryColor,
                     fontSize: 12,
-                    fontWeight: FontWeight.black,
+                    fontWeight: FontWeight.w900,
                     letterSpacing: 2,
                   ),
                 ),
@@ -125,7 +125,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   'Welcome Back',
                   textAlign: TextAlign.center,
                   style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                    fontWeight: FontWeight.black,
+                    fontWeight: FontWeight.w900,
                     color: Colors.white,
                   ),
                 ),
@@ -197,7 +197,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("Don't have an account? ", style: TextStyle(color: Colors.slate[400])),
+                    Text("Don't have an account? ", style: TextStyle(color: Colors.grey[400])),
                     GestureDetector(
                       onTap: () => Navigator.pushNamed(context, '/register', arguments: _role),
                       child: Text('Register here', style: TextStyle(color: primaryColor, fontWeight: FontWeight.bold)),

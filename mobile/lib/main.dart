@@ -55,7 +55,7 @@ class BloodLossMonitorApp extends StatelessWidget {
           ),
         ),
         textTheme: const TextTheme(
-          displayLarge: TextStyle(fontFamily: 'Outfit', fontWeight: FontWeight.black),
+          displayLarge: TextStyle(fontFamily: 'Outfit', fontWeight: FontWeight.w900),
           titleLarge: TextStyle(fontFamily: 'Outfit', fontWeight: FontWeight.bold),
           bodyMedium: TextStyle(fontFamily: 'Outfit', fontWeight: FontWeight.normal),
         ),

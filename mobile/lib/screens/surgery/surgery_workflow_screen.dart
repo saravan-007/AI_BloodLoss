@@ -230,9 +230,9 @@ class _SurgeryWorkflowScreenState extends State<SurgeryWorkflowScreen> {
               ),
               child: Column(
                 children: [
-                  Text('TOTAL BLOOD LOSS', style: TextStyle(color: Colors.slate[400], fontSize: 11, fontWeight: FontWeight.bold)),
+                  Text('TOTAL BLOOD LOSS', style: TextStyle(color: Colors.grey[400], fontSize: 11, fontWeight: FontWeight.bold)),
                   const SizedBox(height: 8),
-                  Text('${prov.totalBloodLoss.toInt()} ml', style: TextStyle(color: statusColor, fontSize: 32, fontWeight: FontWeight.black)),
+                  Text('${prov.totalBloodLoss.toInt()} ml', style: TextStyle(color: statusColor, fontSize: 32, fontWeight: FontWeight.w900)),
                   const SizedBox(height: 4),
                   Text('Severity: ${prov.bloodLossSeverity}', style: TextStyle(color: statusColor, fontWeight: FontWeight.bold)),
                   Text('Representing ${prov.bloodLossPct.toStringAsFixed(1)}% of estimated volume', style: const TextStyle(fontSize: 12)),
@@ -249,7 +249,7 @@ class _SurgeryWorkflowScreenState extends State<SurgeryWorkflowScreen> {
             const SizedBox(height: 16),
             TextFormField(
               controller: _durationController,
-              keyboardType: const TextInputType.withOptions(decimal: true),
+              keyboardType: const TextInputType.numberWithOptions(decimal: true),
               decoration: const InputDecoration(labelText: 'Surgery Elapsed Duration (hours)', border: OutlineInputBorder()),
             ),
             const SizedBox(height: 20),
@@ -284,12 +284,12 @@ class _SurgeryWorkflowScreenState extends State<SurgeryWorkflowScreen> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 const Text('Aggregate Fluid Loss:'),
-                Text('${prov.totalFluidLoss.toInt()} ml', style: const TextStyle(fontSize: 20, fontWeight: FontWeight.black, color: Colors.amber)),
+                Text('${prov.totalFluidLoss.toInt()} ml', style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w900, color: Colors.amber)),
               ],
             ),
             const SizedBox(height: 24),
             if (analysis != null) ...[
-              const Text('AI Consultation Feedback', style: TextStyle(fontSize: 13, fontWeight: FontWeight.black, color: Colors.blue)),
+              const Text('AI Consultation Feedback', style: TextStyle(fontSize: 13, fontWeight: FontWeight.w900, color: Colors.blue)),
               const SizedBox(height: 8),
               Text('Overall Case Severity: ${analysis['overallRiskLevel']}', style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.redAccent)),
               Text(analysis['summary'] ?? '', style: const TextStyle(fontSize: 12, height: 1.4)),
@@ -335,7 +335,7 @@ class _SurgeryWorkflowScreenState extends State<SurgeryWorkflowScreen> {
                         width: 32,
                         height: 32,
                         decoration: BoxDecoration(
-                          color: isCompleted ? Colors.green : (isActive ? Colors.blue : Colors.slate[800]),
+                          color: isCompleted ? Colors.green : (isActive ? Colors.blue : Colors.grey[800]),
                           shape: BoxShape.circle,
                         ),
                         child: Center(

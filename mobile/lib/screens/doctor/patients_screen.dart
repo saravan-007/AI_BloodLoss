@@ -232,10 +232,10 @@ class _PatientsScreenState extends State<PatientsScreen> {
                                       children: [
                                         Text(
                                           patient['patientName'],
-                                          style: const TextStyle(fontSize: 16, fontWeight: FontWeight.black),
+                                          style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w900),
                                         ),
                                         Container(
-                                          padding: const EdgeInsets.symmetric(horizontal: 8, py: 4),
+                                          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                                           decoration: BoxDecoration(
                                             color: statusColor.withOpacity(0.1),
                                             border: Border.all(color: statusColor.withOpacity(0.3)),
@@ -251,7 +251,7 @@ class _PatientsScreenState extends State<PatientsScreen> {
                                     const SizedBox(height: 6),
                                     Text(
                                       '${patient['age']} y/o • ${patient['gender']} • ${patient['weight']} kg • Group: ${patient['bloodGroup']}',
-                                      style: TextStyle(color: Colors.slate[400], fontSize: 12),
+                                      style: TextStyle(color: Colors.grey[400], fontSize: 12),
                                     ),
                                     const SizedBox(height: 12),
                                     const Divider(color: Color(0xFF1E293B)),
@@ -262,14 +262,14 @@ class _PatientsScreenState extends State<PatientsScreen> {
                                         Column(
                                           crossAxisAlignment: CrossAxisAlignment.start,
                                           children: [
-                                            Text('SURGERY', style: TextStyle(color: Colors.slate[500], fontSize: 8, fontWeight: FontWeight.bold)),
+                                            Text('SURGERY', style: TextStyle(color: Colors.grey[500], fontSize: 8, fontWeight: FontWeight.bold)),
                                             Text(patient['surgeryType'] ?? 'General', style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
                                           ],
                                         ),
                                         Column(
                                           crossAxisAlignment: CrossAxisAlignment.start,
                                           children: [
-                                            Text('LOCATION', style: TextStyle(color: Colors.slate[500], fontSize: 8, fontWeight: FontWeight.bold)),
+                                            Text('LOCATION', style: TextStyle(color: Colors.grey[500], fontSize: 8, fontWeight: FontWeight.bold)),
                                             Text(patient['otRoom'] ?? 'Unassigned', style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
                                           ],
                                         ),

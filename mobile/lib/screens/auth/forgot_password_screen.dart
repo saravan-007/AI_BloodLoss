@@ -107,13 +107,13 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                 Text(
                   'Password Recovery',
                   style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                    fontWeight: FontWeight.black,
+                    fontWeight: FontWeight.w900,
                     color: Colors.white,
                   ),
                 ),
                 Text(
                   'Enter your registered email to receive an OTP verification code.',
-                  style: TextStyle(color: Colors.slate[400], fontSize: 13),
+                  style: TextStyle(color: Colors.grey[400], fontSize: 13),
                 ),
                 const SizedBox(height: 32),
 
@@ -159,13 +159,13 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                 Text(
                   'Enter Verification Code',
                   style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                    fontWeight: FontWeight.black,
+                    fontWeight: FontWeight.w900,
                     color: Colors.white,
                   ),
                 ),
                 Text(
                   'Enter the code sent and choose your new password.',
-                  style: TextStyle(color: Colors.slate[400], fontSize: 13),
+                  style: TextStyle(color: Colors.grey[400], fontSize: 13),
                 ),
                 const SizedBox(height: 16),
 
@@ -219,7 +219,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                 const SizedBox(height: 16),
                 TextButton(
                   onPressed: () => setState(() => _step = 1),
-                  child: const Text('Back to Email Form', style: TextStyle(color: Colors.slate)),
+                  child: const Text('Back to Email Form', style: TextStyle(color: Colors.grey)),
                 ),
               ],
             ],

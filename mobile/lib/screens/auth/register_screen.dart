@@ -188,13 +188,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     Text(
                       'Create Account',
                       style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                        fontWeight: FontWeight.black,
+                        fontWeight: FontWeight.w900,
                         color: Colors.white,
                       ),
                     ),
                     Text(
                       'Join the intraoperative blood loss estimating registry.',
-                      style: TextStyle(color: Colors.slate[400], fontSize: 13),
+                      style: TextStyle(color: Colors.grey[400], fontSize: 13),
                     ),
                     const SizedBox(height: 28),
 
@@ -256,7 +256,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             ),
                             Text(
                               '${(_passwordStrength * 100).toInt()}%',
-                              style: TextStyle(color: Colors.slate[400], fontSize: 11),
+                              style: TextStyle(color: Colors.grey[400], fontSize: 11),
                             ),
                           ],
                         ),
@@ -265,7 +265,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           borderRadius: BorderRadius.circular(4),
                           child: LinearProgressIndicator(
                             value: _passwordStrength,
-                            backgroundColor: Colors.slate[800],
+                            backgroundColor: Colors.grey[800],
                             valueColor: AlwaysStoppedAnimation<Color>(_strengthColor),
                             minHeight: 4,
                           ),
@@ -355,7 +355,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           Text(
                             'Enter the 6-digit code sent to your email.',
                             textAlign: TextAlign.center,
-                            style: TextStyle(color: Colors.slate[400], fontSize: 13),
+                            style: TextStyle(color: Colors.grey[400], fontSize: 13),
                           ),
                           
                           // Dev mode OTP banner
@@ -370,7 +370,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                               child: Text(
                                 'DEV OTP CODE: $_expectedOtp',
                                 textAlign: TextAlign.center,
-                                style: const TextStyle(fontWeight: FontWeight.black, color: Colors.amber),
+                                style: const TextStyle(fontWeight: FontWeight.w900, color: Colors.amber),
                               ),
                             ),
                           
@@ -380,7 +380,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             keyboardType: TextInputType.number,
                             maxLength: 6,
                             textAlign: TextAlign.center,
-                            style: const TextStyle(fontSize: 20, letterSpacing: 6, fontWeight: FontWeight.black),
+                            style: const TextStyle(fontSize: 20, letterSpacing: 6, fontWeight: FontWeight.w900),
                             decoration: InputDecoration(
                               counterText: '',
                               border: OutlineInputBorder(borderRadius: BorderRadius.circular(16)),
@@ -407,13 +407,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                   _resendTimer?.cancel();
                                   setState(() => _showOtpOverlay = false);
                                 },
-                                child: Text('Cancel', style: TextStyle(color: Colors.slate[400])),
+                                child: Text('Cancel', style: TextStyle(color: Colors.grey[400])),
                               ),
                               TextButton(
                                 onPressed: _timerSeconds > 0 ? null : _handleRegisterRequest,
                                 child: Text(
                                   _timerSeconds > 0 ? 'Resend in ${_timerSeconds}s' : 'Resend Code',
-                                  style: TextStyle(color: _timerSeconds > 0 ? Colors.slate : Colors.blue, fontWeight: FontWeight.bold),
+                                  style: TextStyle(color: _timerSeconds > 0 ? Colors.grey : Colors.blue, fontWeight: FontWeight.bold),
                                 ),
                               ),
                             ],
