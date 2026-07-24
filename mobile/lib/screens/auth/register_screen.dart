@@ -423,7 +423,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     ),
                   ),
                 ],
-              ).animate().scale(begin: 0.95, curve: Curves.easeInOut),
+              ).animate().scale(begin: const Offset(0.95, 0.95), curve: Curves.easeInOut),
             ),
         ],
       ),

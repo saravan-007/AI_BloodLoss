@@ -19,7 +19,7 @@ class LandingScreen extends StatelessWidget {
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 color: const Color(0xFF3B82F6).withOpacity(0.15),
-                blurRadius: 100,
+                
               ),
             ),
           ),
@@ -45,7 +45,7 @@ class LandingScreen extends StatelessWidget {
                         size: 64,
                         color: Color(0xFF3B82F6),
                       ),
-                    ).animate().scale(delay: 200.ms, duration: 500.ms, curve: Curves.outBack),
+                    ).animate().scale(delay: 200.ms, duration: 500.ms, curve: Curves.easeOutBack),
                   ),
                   const SizedBox(height: 24),
                   Text(

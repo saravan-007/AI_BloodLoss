@@ -46,7 +46,7 @@ class BloodLossMonitorApp extends StatelessWidget {
           background: Color(0xFF070A13),
           error: Color(0xFFEF4444), // Rose red
         ),
-        cardTheme: const CardTheme(
+        cardTheme: const CardThemeData(
           color: Color(0xFF0F172A),
           elevation: 0,
           shape: RoundedRectangleBorder(

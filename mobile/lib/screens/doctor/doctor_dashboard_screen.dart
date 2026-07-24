@@ -230,7 +230,7 @@ class _DoctorDashboardScreenState extends State<DoctorDashboardScreen> {
                       const SizedBox(height: 8),
                       _buildStatCard('SURGERIES TODAY', '$_totalSurgeriesToday', Icons.medical_services_outlined, const Color(0xFF10B981)),
                       const SizedBox(height: 8),
-                      _buildStatCard('AGGREGATE BLOOD LOSS', '${_totalBloodLossToday.toInt()} ml', Icons.bloodtype_outlined, Colors.rose),
+                      _buildStatCard('AGGREGATE BLOOD LOSS', '${_totalBloodLossToday.toInt()} ml', Icons.bloodtype_outlined, Colors.redAccent),
                     ],
                   ),
             const SizedBox(height: 20),
