@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { @apply border-dark-border; }
+  body { @apply font-['Plus_Jakarta_Sans'] bg-[#0b0f1a] text-slate-200 antialiased selection:bg-primary-500/30; }
+  ::-webkit-scrollbar { @apply w-2 h-2; }
+  ::-webkit-scrollbar-track { @apply bg-[#0b0f1a]; }
+  ::-webkit-scrollbar-thumb { @apply bg-slate-800 rounded-full border-4 border-[#0b0f1a]; }
+  ::-webkit-scrollbar-thumb:hover { @apply bg-slate-700; }
+}
+
+@layer utilities {
+  .shadow-blue-glow {
+    box-shadow: 0 0 15px rgba(37, 99, 235, 0.5);
+  }
+  .shadow-emerald-glow {
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.5);
+  }
+}
+
+@layer components {
+  /* Cards */
+  .card { @apply bg-dark-card rounded-2xl shadow-card border border-dark-border p-6; }
+  .card-hover { @apply card transition-all duration-300 hover:shadow-glow hover:-translate-y-0.5; }
+
+  /* Buttons */
+  .btn-primary { @apply inline-flex items-center gap-2 px-5 py-2.5 bg-dark-active text-white font-semibold rounded-xl hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all duration-200 shadow-blue-glow disabled:opacity-50 disabled:cursor-not-allowed; }
+  .btn-secondary { @apply inline-flex items-center gap-2 px-5 py-2.5 bg-slate-800 text-slate-200 font-semibold rounded-xl hover:bg-slate-700 focus:outline-none transition-all duration-200; }
+  .btn-danger { @apply inline-flex items-center gap-2 px-5 py-2.5 bg-danger-600 text-white font-semibold rounded-xl hover:bg-danger-700 transition-all duration-200 shadow-glow-red; }
+  .btn-success { @apply inline-flex items-center gap-2 px-5 py-2.5 bg-medical-600 text-white font-semibold rounded-xl hover:bg-medical-700 transition-all duration-200; }
+  .btn-outline { @apply inline-flex items-center gap-2 px-5 py-2.5 border-2 border-dark-active text-white font-semibold rounded-xl hover:bg-dark-active transition-all duration-200; }
+  .btn-ghost { @apply inline-flex items-center gap-2 px-4 py-2 text-slate-300 font-medium rounded-xl hover:bg-slate-800 hover:text-white transition-all duration-200; }
+  .btn-sm { @apply px-3 py-1.5 text-sm; }
+  .btn-lg { @apply px-8 py-3.5 text-base; }
+  .btn-xl { @apply px-10 py-4 text-lg; }
+
+  /* Form inputs */
+  .input { @apply w-full px-4 py-3 rounded-xl border border-slate-800 bg-[#0c1221] text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500/50 transition-all duration-200 text-sm font-semibold; }
+  .input-error { @apply input border-danger-500/50 focus:ring-danger-500/50; }
+  .label { @apply block text-[11px] font-extrabold text-slate-300 mb-2 uppercase tracking-[0.15em]; }
+
+  /* Badges */
+  .badge { @apply inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold; }
+  .badge-blue { @apply badge bg-[#1e3a8a] bg-opacity-40 text-primary-200 border border-[#1e40af] border-opacity-50; }
+  .badge-green { @apply badge bg-[#14532d] bg-opacity-40 text-emerald-200 border border-[#166534] border-opacity-50; }
+  .badge-red { @apply badge bg-[#7f1d1d] bg-opacity-40 text-rose-200 border border-[#991b1b] border-opacity-50; }
+  .badge-yellow { @apply badge bg-[#78350f] bg-opacity-40 text-amber-200 border border-[#92400e] border-opacity-50; }
+  .badge-gray { @apply badge bg-[#1e293b] bg-opacity-40 text-slate-200 border border-[#334155] border-opacity-50; }
+
+  /* Glass effect */
+  .glass { @apply bg-white/5 backdrop-blur-md border border-white/10; }
+  .glass-dark { @apply bg-slate-900/60 backdrop-blur-md border border-slate-700/50; }
+
+  /* Sidebar */
+  .sidebar-link { @apply flex items-center gap-3 px-4 py-3 rounded-xl text-slate-300 font-bold tracking-tight transition-all duration-200 hover:bg-slate-800 hover:text-white cursor-pointer text-[13px]; }
+  .sidebar-link-active { @apply flex items-center gap-3 px-4 py-3 rounded-xl bg-primary-600 text-white font-extrabold tracking-tight shadow-blue-glow; }
+  .sidebar-link-active-nurse { @apply flex items-center gap-3 px-4 py-3 rounded-xl bg-emerald-600 text-white font-extrabold tracking-tight shadow-emerald-glow; }
+
+  /* Stat cards */
+  .stat-card { @apply card flex items-start gap-4; }
+  .stat-icon { @apply flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center text-xl; }
+
+  /* Table */
+  .table-header { @apply text-left text-xs font-semibold text-slate-300 uppercase tracking-wider py-3 px-4 bg-dark-bg/80; }
+  .table-cell { @apply py-4 px-4 text-sm text-slate-300; }
+  .table-row { @apply border-b border-dark-border hover:bg-slate-800/30 transition-colors; }
+
+  /* Surgery step */
+  .step-card { @apply card border-l-4 border-primary-500; }
+  .step-number { @apply w-8 h-8 rounded-full bg-primary-600 text-white text-sm font-bold flex items-center justify-center flex-shrink-0; }
+
+  /* Alert */
+  .alert { @apply flex items-start gap-3 p-4 rounded-xl border; }
+  .alert-danger { @apply alert bg-[#7f1d1d] bg-opacity-20 border-[#991b1b] border-opacity-50 text-[#fecdd3]; }
+  .alert-warning { @apply alert bg-[#78350f] bg-opacity-20 border-[#92400e] border-opacity-50 text-[#fde68a]; }
+  .alert-success { @apply alert bg-[#14532d] bg-opacity-20 border-[#166534] border-opacity-50 text-[#bbf7d0]; }
+  .alert-info { @apply alert bg-[#1e3a8a] bg-opacity-20 border-[#1e40af] border-opacity-50 text-[#bfdbfe]; }
+}
+
+/* Custom animations */
+@keyframes shimmer {
+  0% { background-position: -200px 0; }
+  100% { background-position: calc(200px + 100%) 0; }
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+  background-size: 200px 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* OTP input boxes */
+.otp-input {
+  @apply w-12 h-14 text-center text-2xl font-bold border-2 border-slate-200 rounded-xl bg-white focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-all;
+}
+
+/* Progress steps */
+.progress-step { @apply flex flex-col items-center gap-1; }
+.progress-step-circle { @apply w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm border-2 transition-all duration-300; }
+.progress-step-circle.active { @apply bg-primary-600 border-primary-600 text-white; }
+.progress-step-circle.done { @apply bg-medical-500 border-medical-500 text-white; }
+.progress-step-circle.pending { @apply bg-white border-slate-300 text-slate-300; }
+.progress-step-line { @apply flex-1 h-0.5 bg-slate-200; }
+.progress-step-line.done { @apply bg-medical-400; }
+
+/* Page transition */
+.page-enter { animation: pageSlide 0.3s ease-out; }
+@keyframes pageSlide {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

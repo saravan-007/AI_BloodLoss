@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Production build artifacts
+client/dist/
+dist/
+
+# Env secrets
+.env
+server/.env
+client/.env
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editor/OS files
+.vscode/
+.idea/
+.DS_Store
